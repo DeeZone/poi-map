@@ -3,40 +3,40 @@
 <head>
 	<title>PlayPoi Leaflet Test</title>
 	<meta charset="utf-8" />
-
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<link rel="stylesheet" href="../dist/leaflet.css" />
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet\
+	.ie.css" />
+  <![endif]-->
+  <style>
+    html, body { height: 90%; margin: 0px; }
+    #map { height: 90%; }
+		table { border:0.1em solid black; }
+		td { border:0.1em solid black; padding: 0.75em; }
+  </style>
 </head>
 <body>
-	<div id="map" style="width: 600px; height: 400px"></div>
+	<div id="map"></div>
 
-	<script src="../dist/leaflet.js"></script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
 	<script>
 
-		var map = L.map('map').setView([49.2612260,-123.1139270], 13);
+		var map = L.map('map').setView([49.35,-140.50], 13);
+		
 
 		L.tileLayer('http://{s}.tile.cloudmade.com/0db14db58fce434e956ce93748129124/997/256/{z}/{x}/{y}.png', {
 			maxZoom: 18,
 			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
 		}).addTo(map);
 
-
-		L.marker([51.5, -0.09]).addTo(map)
-			.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
-
-		L.circle([51.508, -0.11], 500, {
-			color: 'red',
-			fillColor: '#f03',
-			fillOpacity: 0.5
-		}).addTo(map).bindPopup("I am a circle.");
-
-		L.polygon([
-			[51.509, -0.08],
-			[51.503, -0.06],
-			[51.51, -0.047]
-		]).addTo(map).bindPopup("I am a polygon.");
-
+    L.marker([9.7489170,-83.7534280]).addTo(map)
+		  .bindPopup("<b>The Scales of Poi</b>").openPopup();
+		L.marker([49.26,-123.11]).addTo(map)
+			.bindPopup("<b>Hello Nick!</b><br />I am a popup.").openPopup();
+		L.marker([49.25,-123.18]).addTo(map)
+			.bindPopup("<b>Hello Nick!</b><br />I am a popup too.").openPopup();
+			
 
 		var popup = L.popup();
 
@@ -46,9 +46,30 @@
 				.setContent("You clicked the map at " + e.latlng.toString())
 				.openOn(map);
 		}
+		
+		function panToCR() {
+			map.setView([9.74,-83.75], 9, {animate: true, duration: 1});
+			
+      return true;
+    }
 
 		map.on('click', onMapClick);
 
 	</script>
+	<h1>Events</h1>
+	<table>
+		<tr>
+			<td>Event</td>
+			<td>Location</td>
+			<td>Start Date</td>
+			<td>End Date</td>
+		</tr>
+		<tr>
+			<td>The Scales of Poi</td>
+			<td><a href="#" onclick="panToCR();">Costa Rica</a> (9.7489170,-83.7534280)</td>
+			<td>20 February 2014</td>
+			<td>23 February 2014</td>
+		</tr>
+	</table>
 </body>
 </html>
