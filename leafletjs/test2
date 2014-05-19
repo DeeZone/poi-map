@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PlayPoi Leaflet Test</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet\
+	.ie.css" />
+  <![endif]-->
+  <style>
+    html, body { height: 90%; margin: 0px; }
+    #map { height: 90%; }
+		table { border:0.1em solid black; }
+		td { border:0.1em solid black; padding: 0.75em; }
+  </style>
+</head>
+<body>
+	<div id="map"></div>
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+	<div class='search'>
+    Find location:
+    <form id='searchform' method='get' action=''>
+        <input type='text' id='search' placeholder='e.g. New York' />
+        <input type='submit' value='Go' />
+        <div class='results'></div>
+    </form>
+  </div>
+	<script>
+
+		var map = L.map('map').setView([49.26,-123.11], 13);
+
+		L.tileLayer('http://{s}.tile.cloudmade.com/0db14db58fce434e956ce93748129124/997/256/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
+		}).addTo(map);
+
+		L.marker([49.26,-123.11]).addTo(map)
+			.bindPopup("<b>Hello Nick!</b><br />I am a popup.").openPopup();
+
+
+		var popup = L.popup();
+
+		function onMapClick(e) {
+			popup
+				.setLatLng(e.latlng)
+				.setContent("You clicked the map at " + e.latlng.toString())
+				.openOn(map);
+		}
+		
+		function panToEvent(location, eventTitle) {
+			alert(eventTitle);
+			map.setView(location, 9, {animate: true, duration: 1});
+			L.marker(location).addTo(map).bindPopup(eventTitle).openPopup();
+      return true;
+    }
+
+		map.on('click', onMapClick);
+
+	</script>
+	
+	<h1>Events</h1>
+	<table>
+		<tr>
+			<td><strong>Event</strong></td>
+			<td><strong>Location</strong></td>
+			<td><strong>Start Date</strong></td>
+			<td><strong>End Date</strong></td>
+		</tr>
+		<tr>
+			<td>The Scales of Poi</td>
+			<td><a href="#" onclick="javascript:panToEvent([9.7489170,-83.7534280], 'The Scales of Poi');">Costa Rica</a> (9.7489170,-83.7534280)</td>
+			<td>20 February 2014</td>
+			<td>23 February 2014</td>
+		</tr>
+		<tr>
+			<td>Leviathan Studios Poi Retreat!</td>
+			<td><a href="#" onclick="panToEvent([49.4863410,-124.2758770], 'Leviathan Studios Poi Retreat!');">Lasqueti Island, BC, Canada</a> (49.4863410,-124.2758770)</td>
+			<td>June 7, 2014</td>
+			<td>June 16, 2014</td>
+		</tr>
+		<tr>
+			<td>Swiss Poi and Yoga Retreat</td>
+			<td><a href="#" onclick="panToEvent([46.9846370,7.7623800], 'Swiss Poi and Yoga Retreat');">Emmental, Switzerland</a> (46.9846370,7.7623800)</td>
+			<td>August 9, 2014</td>
+			<td>August 15, 2014</td>
+		</tr>
+	</table>
+</body>
+</html>
