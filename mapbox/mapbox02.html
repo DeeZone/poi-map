@@ -50,22 +50,24 @@
       color:#FFF;
       }
 </style>
-<nav id='menu-ui' class='menu-ui'>
-  <a href='#' class='active' id='filter-all'>All events</a>
-  <a href='#' id='filter-spinning'>Spinning events</a>
-	<a href='#' id='filter-workshop'>Workshop events</a>
-	<a href='#' id='filter-poi-yoga'>Poi & Yoga events</a>
+<nav id="menu-ui" class="menu-ui">
+  <a href="#" class='active' id='filter-all'>All events</a>
+  <a href="#" id="filter-spinning">Spinning events</a>
+	<a href="#" id="filter-workshop">Workshop events</a>
+	<a href="#" id="filter-poi-yoga">Poi & Yoga events</a>
 </nav>
-<div id='map'></div>
+<div id="map"></div>
 <script>
 
-  var map = L.mapbox.map('map', 'deezone.i95knkdl')
-    .setView([49.26,-123.11], 3)
+  var map = L.mapbox.map('map', 'deezone.i95knkdl'),
+     spinning = document.getElementById('filter-spinning'),
+     workshop = document.getElementById('filter-workshop'),
+     all = document.getElementById('filter-all');
+		 
+		 map.setView([49.26,-123.11], 3)
     .addControl(L.mapbox.geocoderControl('deezone.i95knkdl', {
       keepOpen: true
-	   })),
-     spinning = document.getElementById('filter-spinning'),
-     all = document.getElementById('filter-all');
+	   }));
 
 	var eventsLayer = L.mapbox.featureLayer().addTo(map);
 	
@@ -84,7 +86,7 @@
             // https://www.mapbox.com/foundations/an-open-platform/#simplestyle
             'marker-color': '#f86767',
             'marker-size': 'large',
-            'marker-symbol': 'circle-stroked',
+            'marker-symbol': 'circle',
             'url': 'http://www.playpoi.com/learn/instructional-dvds/scales-of-poi'
         }
     },
@@ -131,24 +133,34 @@
   });
 	
 	spinning.onclick = function(e) {
-        all.className = '';
-        this.className = 'active';
-        // The setFilter function takes a GeoJSON feature object
-        // and returns true to show it or false to hide it.
-        map.eventsLayer.setFilter(function(f) {
-            return f.properties['marker-symbol'] === 'circle-stroked';
-        });
-        return false;
-    };
+    all.className = '';
+    this.className = 'active';
+    // The setFilter function takes a GeoJSON feature object
+    // and returns true to show it or false to hide it.
+    map.featureLayer.setFilter(function(f) {
+      return f.properties['marker-symbol'] === 'circle-stroked';
+    });
+    return false;
+  };
+	
+	workshop.onclick = function(e) {
+    all.className = '';
+    this.className = 'active';
+    map.featureLayer.setFilter(function(f) {
+      return f.properties['marker-symbol'] === 'circle';
+    });
+    return false;
+  };
 
-    all.onclick = function() {
-        food.className = '';
-        this.className = 'active';
-        map.eventsLayer.setFilter(function(f) {
-            // Returning true for all markers shows everything.
-            return true;
-        });
-        return false;
+  all.onclick = function() {
+    spinning.className = '';
+		workshop.className = '';
+    this.className = 'active';
+    map.featureLayer.setFilter(function(f) {
+      // Returning true for all markers shows everything.
+      return true;
+    });
+    return false;
     };
 
 </script>
