@@ -44,29 +44,15 @@
 			</tr>
 		</table>
     <script>
+			var map = L.mapbox.map('map', 'deezone.i95knkdl')
+			  .setView([49.26,-123.11], 13);
 		
- var map = L.mapbox.map('map', 'deezone.i95knkdl')
-    .setView([49.26,-123.11], 13);
+		  L.mapbox.map('map', 'deezone.i95knkdl')
+        .addControl(L.mapbox.geocoderControl('deezone.i95knkdl'));
+		
 
-L.mapbox.featureLayer({
-    // this feature is in the GeoJSON format: see geojson.org
-    // for the full specification
-    type: 'Feature',
-    geometry: {
-        type: 'Point',
-        // coordinates here are in longitude, latitude order because
-        // x, y is the standard for GeoJSON and many formats
-        coordinates: [49.26,-123.11]
-    },
-    properties: {
-        title: 'A Single Marker',
-        description: 'Just one of me',
-        // one can customize markers by adding simplestyle properties
-        // http://mapbox.com/developers/simplestyle/
-        'marker-size': 'large',
-        'marker-color': '#f0a'
-    }
-}).addTo(map);
+
+
 
     </script>
 
