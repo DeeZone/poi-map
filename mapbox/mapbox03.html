@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8 />
+    <title>Playpoi.com workshops</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.css' rel='stylesheet' />
+    <style>
+      body { margin:0; padding:0; }
+      #map { position:absolute; top:0; bottom:0; width:100%; }
+
+			.menu-ui {
+				background:#fff;
+				position:absolute;
+				top:10px;right:10px;
+				z-index:1;
+				border-radius:3px;
+				width:120px;
+				border:1px solid rgba(0,0,0,0.4);
+			}
+			.menu-ui a {
+				font-size:13px;
+				color:#404040;
+				display:block;
+				margin:0;padding:0;
+				padding:10px;
+				text-decoration:none;
+				border-bottom:1px solid rgba(0,0,0,0.25);
+				text-align:center;
+			}
+			.menu-ui a:first-child {
+				border-radius:3px 3px 0 0;
+			}
+			.menu-ui a:last-child {
+				border:none;
+				border-radius:0 0 3px 3px;
+			}
+			.menu-ui a:hover {
+				background:#f8f8f8;
+				color:#404040;
+			}
+			.menu-ui a.active,
+			.menu-ui a.active:hover {
+				background:#3887BE;
+				color:#FFF;
+			}
+		</style>
+	</head>
+	<body>
+    <div id="map"></div>
+    <script>
+	
+			var map = L.mapbox.map('map', 'deezone.i95knkdl');			
+			map.setView([39.26,-1.11], 3)
+				.addControl(L.mapbox.geocoderControl('deezone.i95knkdl', {
+					keepOpen: true
+				}
+				));
+			var eventsLayer = L.mapbox.featureLayer().addTo(map);
+	
+			function fetchJSONFile(path, callback) {
+				var httpRequest = new XMLHttpRequest();
+				httpRequest.onreadystatechange = function() {
+					if (httpRequest.readyState === 4) {
+						if (httpRequest.status === 200) {
+							var data = JSON.parse(httpRequest.responseText);
+							if (callback) callback(data);
+						}
+					}
+				};
+				httpRequest.open('GET', path);
+				httpRequest.send();
+			}
+	
+			fetchJSONFile('workshops.json', function(data){
+				eventsLayer.setGeoJSON(data);
+			  eventsLayer.on('click', function(e) {
+		      var clickedPinURL = e.layer.feature.properties.url;
+		      if (typeof clickedPinURL !== 'undefined') {
+            e.layer.unbindPopup();
+            window.open(clickedPinURL);
+	        }
+        });
+			});
+			
+			
+    </script>
+  </body>
+</html>

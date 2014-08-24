@@ -1,0 +1,305 @@
+{
+	"type" : "FeatureCollection",
+	"features" : [
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [-87.216915, 30.421309]
+			},
+			"properties" : {
+				"title" : "Zachary Dwyer",
+				"description": "Pensacola, Florida, United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"marker-color": "#f86767",
+				"marker-size": "large",
+				"marker-color": "#BE9A6B",
+				"marker-symbol": "circle-stroked"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [-123.113927, 49.261226]
+			},
+			"properties" : {
+				"title" : "Lars Bruheim",
+				"description" : "Vancouver, British Columbia, Canada<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size": "large",
+				"marker-color": "#BE9A6B",
+				"marker-symbol": "circle-stroked"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [-123.026208, 44.990119]
+			},
+			"properties" : {
+				"title" : "Crystal Areal",
+				"description" : "Keizer, Oregon, United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}		
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [-70.934205, 41.636215]
+			},
+			"properties" : {
+				"title" : "Shelby Dubois-Jenness",
+				"description" : "New Bedford, Mssachusetts, United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [-89.689286, 39.770890]
+			},
+			"properties" : {
+				"title" : "Knight",
+				"description" : "Springfield, Montania, United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked'"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [-81.655651, 30.332184]
+			},
+			"properties" : {
+				"title" : "Brian Davis",
+				"description" : "Jacksonville, Florida, United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [153.196762, -29.456849]
+			},
+			"properties" : {
+				"title" : "Jacob Buxton",
+				"description" : "Maclean, New South Wales, Australia<br /><ul><li>Beginner</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [8.672434, 49.398752]
+			},
+			"properties" : {
+				"title" : "Chris Martin",
+				"description" : "Heidelberg, Germany<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [18.424055, -33.924869]
+			},
+			"properties" : {
+				"title" : "Duncan Greenwood",
+				"description" : "Cape Town, South Africa<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [103.819836, 1.352083]
+			},
+			"properties" : {
+				"title" : "Max Pagel",
+				"description" : "Singapore<br /><ul><li>Beginner</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [-96.948894, 32.814018]
+			},
+			"properties" : {
+				"title" : "Sharon Dowell",
+				"description" : "Irving, Texas, United States of America<br /><ul><li>Beginner</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [77.224960, 28.635308]
+			},
+			"properties" : {
+				"title" : "James Macnamara",
+				"description" : "New Delhi, India<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [-81.949533, 26.562854]
+			},
+			"properties" : {
+				"title" : "Sean \"Awesome\" Ambrioso",
+				"description" : "Cape Coral, Florida, United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [-122.121512, 47.673988]
+			},
+			"properties" : {
+				"title" : "Alan Gervin",
+				"description" : "Redmond, Washington, United States of America<br /><ul><li>Beginner</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [9.732010, 52.375892]
+			},
+			"properties" : {
+				"title" : "Christian von Albrecht",
+				"description" : "Hannover, Germany<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [-88.314273, 44.265820]
+			},
+			"properties" : {
+				"title" : "Cody Dalton",
+				"description" : "Combined Locks, Wisconsin, United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [-122.676207, 45.523452]
+			},
+			"properties" : {
+				"title" : "Scenethelite",
+				"description" : "Portland, Oregon, United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}		
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [-83.045754, 42.331427]
+			},
+			"properties" : {
+				"title" : "Tina Wald",
+				"description" : "Detroit ,Michigan, United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [98.993128, 18.787747]
+			},
+			"properties" : {
+				"title" : "Shaun",
+				"description" : "Chiang Mai, Thailand<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [2.352222, 48.856614]
+			},
+			"properties" : {
+				"title" : "Natacha Adjovi",
+				"description" : "Paris, France<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}		
+		}
+	]
+}
