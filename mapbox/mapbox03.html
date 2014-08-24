@@ -9,6 +9,25 @@
     <style>
       body { margin:0; padding:0; }
       #map { position:absolute; top:0; bottom:0; width:100%; }
+			
+			.custom-popup .leaflet-popup-content-wrapper {
+				background:#2c3e50;
+				color:#fff;
+				font-size:16px;
+				line-height:24px;
+			}
+			.custom-popup .leaflet-popup-content-wrapper a {
+				color:rgba(255,255,0,0.8);
+			}
+			.custom-popup .leaflet-popup-tip-container {
+				width:30px;
+				height:15px;
+			}
+			.custom-popup .leaflet-popup-tip {
+				border-left:15px solid transparent;
+				border-right:15px solid transparent;
+				border-top:15px solid #2c3e50;
+			}
 
 			.menu-ui {
 				background:#fff;
@@ -48,7 +67,7 @@
 		</style>
 	</head>
 	<body>
-    <div id="map"></div>
+    <div class='custom-popup' id="map"></div>
     <script>
       L.mapbox.accessToken = 'pk.eyJ1IjoiZGVlem9uZSIsImEiOiJ3bmdJcVlnIn0.AfQscey5bQGEwZIcsvaUBQ';
 			var map = L.mapbox.map('map', 'deezone.i95knkdl');			
@@ -58,6 +77,13 @@
 				}
 				));
 			var eventsLayer = L.mapbox.featureLayer().addTo(map);
+			
+			eventsLayer.on('mouseover', function(e) {
+        e.layer.openPopup();
+      });
+      eventsLayer.on('mouseout', function(e) {
+        e.layer.closePopup();
+      });
 	
 			function fetchJSONFile(path, callback) {
 				var httpRequest = new XMLHttpRequest();
@@ -73,7 +99,7 @@
 				httpRequest.send();
 			}
 	
-			fetchJSONFile(document.URL + 'workshops.json', function(data){
+			fetchJSONFile(window.location.origin + '/workshops.json', function(data){
 				eventsLayer.setGeoJSON(data);
 			  eventsLayer.on('click', function(e) {
 		      var clickedPinURL = e.layer.feature.properties.url;
