@@ -73,7 +73,7 @@
 				httpRequest.send();
 			}
 	
-			fetchJSONFile(document.URL + '/workshops.json', function(data){
+			fetchJSONFile(document.URL + 'workshops.json', function(data){
 				eventsLayer.setGeoJSON(data);
 			  eventsLayer.on('click', function(e) {
 		      var clickedPinURL = e.layer.feature.properties.url;
