@@ -4,8 +4,8 @@
     <meta charset=utf-8 />
     <title>Playpoi.com workshops</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.css' rel='stylesheet' />
     <style>
       body { margin:0; padding:0; }
       #map { position:absolute; top:0; bottom:0; width:100%; }
@@ -50,7 +50,7 @@
 	<body>
     <div id="map"></div>
     <script>
-	
+      L.mapbox.accessToken = 'pk.eyJ1IjoiZGVlem9uZSIsImEiOiJ3bmdJcVlnIn0.AfQscey5bQGEwZIcsvaUBQ';
 			var map = L.mapbox.map('map', 'deezone.i95knkdl');			
 			map.setView([39.26,-1.11], 3)
 				.addControl(L.mapbox.geocoderControl('deezone.i95knkdl', {
