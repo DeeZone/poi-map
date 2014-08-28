@@ -78,7 +78,9 @@
         e.layer.openPopup();
       });
       eventsLayer.on('mouseout', function(e) {
-        e.layer.closePopup();
+				setTimeout( function() {
+					e.layer.closePopup()
+				}, 2000);
       });
 	
 			function fetchJSONFile(path, callback) {
