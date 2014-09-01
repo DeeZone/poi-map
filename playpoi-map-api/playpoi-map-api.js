@@ -1,6 +1,6 @@
 var express = require('express')
     , mongoose = require('mongoose')
-    , Campaign = require('./lib/workshops')
+    , Course = require('./lib/course')
     ;
     
 /**
@@ -87,12 +87,16 @@ mongoose.connection.once('open', function() {
 
   // Map c schema
   var mapCourseSchema = new mongoose.Schema({
-    course_id : {type: Number, index: true},
     updated : Date,
     type : Number,
     title : String,
     description : String,
-    address : String,
+    address1 : String,
+    address2 : String,
+    city : String,
+    region : String,
+    country : String,
+    postal_code: String,
     url : String,
     instructor : String,
     location: {
