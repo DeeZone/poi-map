@@ -83,6 +83,8 @@
 					e.layer.closePopup()
 				}, 2000);
       });
+			
+			
 	
 			function fetchJSONFile(path, callback) {
 				var httpRequest = new XMLHttpRequest();
@@ -100,13 +102,6 @@
 	
 			fetchJSONFile(window.location.origin + '/workshops.json', function(data){
 				eventsLayer.setGeoJSON(data);
-			  eventsLayer.on('click', function(e) {
-		      var clickedPinURL = e.layer.feature.properties.url;
-		      if (typeof clickedPinURL !== 'undefined') {
-            e.layer.unbindPopup();
-            window.open(clickedPinURL);
-	        }
-        });
 			});
 			
 			
