@@ -9,7 +9,7 @@
 			},
 			"properties" : {
 				"title" : "Zachary Dwyer",
-				"description": "Pensacola, Florida, United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"description": "Pensacola, Florida<br />United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
 				"marker-color": "#f86767",
 				"marker-size": "large",
 				"marker-color": "#BE9A6B",
@@ -24,7 +24,7 @@
 			},
 			"properties" : {
 				"title" : "Lars Bruheim",
-				"description" : "Vancouver, British Columbia, Canada<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"description" : "Vancouver, British Columbia<br />Canada<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
 				"marker-color" : "#f86767",
 				"marker-size": "large",
 				"marker-color": "#BE9A6B",
@@ -39,7 +39,7 @@
 			},
 			"properties" : {
 				"title" : "Crystal Areal",
-				"description" : "Keizer, Oregon, United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"description" : "Keizer, Oregon<br />United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
 				"marker-color" : "#f86767",
 				"marker-size" : "large",
 				"marker-color" : "#BE9A6B",
@@ -54,7 +54,7 @@
 			},
 			"properties" : {
 				"title" : "Shelby Dubois-Jenness",
-				"description" : "New Bedford, Mssachusetts, United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"description" : "New Bedford, Mssachusetts<br />United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
 				"marker-color" : "#f86767",
 				"marker-size" : "large",
 				"marker-color" : "#BE9A6B",
@@ -69,7 +69,7 @@
 			},
 			"properties" : {
 				"title" : "Andrew Knight",
-				"description" : "Springfield, Montania, United States of America<br /><ul><li><a href=\"https://www.facebook.com/groups/778264118879720/\" target=\"_new\">Beginner</a> (Facebook)</li><li><a href=\"https://www.facebook.com/groups/720578081345414/\" target=\"_new\">Beyond-the-Basics</a> (Facebook)</li></ul>",
+				"description" : "Springfield, Montania<br />United States of America<br /><ul><li><a href=\"https://www.facebook.com/groups/778264118879720/\" target=\"_new\">Beginner</a> (Facebook)</li><li><a href=\"https://www.facebook.com/groups/720578081345414/\" target=\"_new\">Beyond-the-Basics</a> (Facebook)</li></ul>",
 				"marker-color" : "#f86767",
 				"marker-size" : "large",
 				"marker-color" : "#BE9A6B",
@@ -84,7 +84,7 @@
 			},
 			"properties" : {
 				"title" : "Brian Davis",
-				"description" : "Jacksonville, Florida, United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"description" : "Jacksonville, Florida<br />United States of America<br /><ul><li><a href=\"https://www.facebook.com/groups/1494811210760818/\" target=\"_new\">Beginner</a> (Facebook)</li><li><a href=\"https://www.facebook.com/groups/1487675991476466/\" target=\"_new\">Beyond-the-Basics</a> (Facebook)</li></ul>",
 				"marker-color" : "#f86767",
 				"marker-size" : "large",
 				"marker-color" : "#BE9A6B",
@@ -99,7 +99,7 @@
 			},
 			"properties" : {
 				"title" : "Jacob Buxton",
-				"description" : "Maclean, New South Wales, Australia<br /><ul><li>Beginner</li></ul>",
+				"description" : "Maclean, New South Wales<br />Australia<br /><ul><li>Beginner</li></ul>",
 				"marker-color" : "#f86767",
 				"marker-size" : "large",
 				"marker-color" : "#BE9A6B",
@@ -159,7 +159,7 @@
 			},
 			"properties" : {
 				"title" : "Sharon Dowell",
-				"description" : "Irving, Texas, United States of America<br /><ul><li>Beginner</li></ul>",
+				"description" : "Irving, Texas<br />United States of America<br /><ul><li>Beginner</li></ul>",
 				"marker-color" : "#f86767",
 				"marker-size" : "large",
 				"marker-color" : "#BE9A6B",
@@ -189,7 +189,7 @@
 			},
 			"properties" : {
 				"title" : "Sean \"Awesome\" Ambrioso",
-				"description" : "Cape Coral, Florida, United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"description" : "Cape Coral, Florida<br />United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
 				"marker-color" : "#f86767",
 				"marker-size" : "large",
 				"marker-color" : "#BE9A6B",
@@ -204,7 +204,7 @@
 			},
 			"properties" : {
 				"title" : "Alan Gervin",
-				"description" : "Redmond, Washington, United States of America<br /><ul><li><a href=\"https://www.facebook.com/poilovewashington\" taget=\"_new\">Beginner</a> (Facebook)</li></ul>",
+				"description" : "Redmond, Washington<br />United States of America<br /><ul><li><a href=\"https://www.facebook.com/poilovewashington\" taget=\"_new\">Beginner</a> (Facebook)</li></ul>",
 				"marker-color" : "#f86767",
 				"marker-size" : "large",
 				"marker-color" : "#BE9A6B",
@@ -219,7 +219,7 @@
 			},
 			"properties" : {
 				"title" : "Christian von Albrecht",
-				"description" : "Hannover, Germany<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"description" : "Hannover, Germany<br /><ul><li><a href=\"https://www.facebook.com/groups/343188882514754/\" target=\"_new\">Beginner</a> (Facebook)</li><li><a href=\"https://www.facebook.com/groups/1469614563309022/\" target=\"_new\">Beyond-the-Basics</a> (Facebook)</li></ul>",
 				"marker-color" : "#f86767",
 				"marker-size" : "large",
 				"marker-color" : "#BE9A6B",
@@ -234,7 +234,7 @@
 			},
 			"properties" : {
 				"title" : "Cody Dalton",
-				"description" : "Combined Locks, Wisconsin, United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"description" : "Combined Locks, Wisconsin<br />United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
 				"marker-color" : "#f86767",
 				"marker-size" : "large",
 				"marker-color" : "#BE9A6B",
@@ -249,7 +249,7 @@
 			},
 			"properties" : {
 				"title" : "Scenethelite",
-				"description" : "Portland, Oregon, United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"description" : "Portland, Oregon<br />United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
 				"marker-color" : "#f86767",
 				"marker-size" : "large",
 				"marker-color" : "#BE9A6B",
@@ -264,7 +264,7 @@
 			},
 			"properties" : {
 				"title" : "Tina Wald",
-				"description" : "Detroit, Michigan, United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
+				"description" : "Detroit, Michigan<br />United States of America<br /><ul><li>Beginner</li><li>Beyond-the-Basics</li></ul>",
 				"marker-color" : "#f86767",
 				"marker-size" : "large",
 				"marker-color" : "#BE9A6B",
@@ -309,7 +309,7 @@
 			},
 			"properties" : {
 				"title" : "Fire Euphoria vs. House of Flow",
-				"description" : "Rancho Santa Margarita, California, United States of America<br /><ul><li>Beginner</li><li><a href=\"https://m.facebook.com/groups/1459522867647199\" target=\"_new\">Beyond-the-Basics</a> (Facebook)</li></ul>",
+				"description" : "Rancho Santa Margarita<br />California, United States of America<br /><ul><li>Beginner</li><li><a href=\"https://m.facebook.com/groups/1459522867647199\" target=\"_new\">Beyond-the-Basics</a> (Facebook)</li></ul>",
 				"marker-color" : "#f86767",
 				"marker-size" : "large",
 				"marker-color" : "#BE9A6B",
@@ -328,8 +328,7 @@
 				"marker-color" : "#f86767",
 				"marker-size" : "large",
 				"marker-color" : "#BE9A6B",
-				"marker-symbol" : "circle-stroked",
-				"url" : "https://www.facebook.com/wearefirestorm"
+				"marker-symbol" : "circle-stroked"
 			}		
 		},
 		{
@@ -359,8 +358,37 @@
 				"marker-color" : "#f86767",
 				"marker-size" : "large",
 				"marker-color" : "#BE9A6B",
-				"marker-symbol" : "circle-stroked",
-				"url" : "https://www.facebook.com/groups/686838351384348"
+				"marker-symbol" : "circle-stroked"
+			}		
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [13.404954, 52.520007]
+			},
+			"properties" : {
+				"title" : "Chris Feuertanz",
+				"description" : "Berlin, Germany<br /><ul><li><a href=\"https://www.facebook.com/groups/852002171478015/\" target=\"_new\">Beginner</a> (Facebook)</li><li><a href=\"https://www.facebook.com/groups/1496513090587062/\" target=\"_new\">Beyond-the-Basics</a> (Facebook)</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
+			}		
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [-71.636667, 43.864722]
+			},
+			"properties" : {
+				"title" : "Christie Foster",
+				"description" : "Campton, New Hampshire<br />United States of America<br /><ul><li>Beginner</li></ul>",
+				"marker-color" : "#f86767",
+				"marker-size" : "large",
+				"marker-color" : "#BE9A6B",
+				"marker-symbol" : "circle-stroked"
 			}		
 		}
 	]
