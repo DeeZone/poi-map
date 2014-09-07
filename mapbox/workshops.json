@@ -110,21 +110,6 @@
 			"type" : "Feature",
 			"geometry" : {
 				"type" : "Point",
-				"coordinates" : [8.672434, 49.398752]
-			},
-			"properties" : {
-				"title" : "Chris Martin",
-				"description" : "Heidelberg, Germany<br /><ul><li><a href=\"https://www.facebook.com/groups/852002171478015/\" target=\"_new\">Beginner</a> (Facebook)</li><li><a href=\"https://www.facebook.com/groups/1496513090587062/\" target=\"_new\">Beyond-the-Basics</a> (Facebook)</li></ul>",
-				"marker-color" : "#f86767",
-				"marker-size" : "large",
-				"marker-color" : "#BE9A6B",
-				"marker-symbol" : "circle-stroked"
-			}
-		},
-		{
-			"type" : "Feature",
-			"geometry" : {
-				"type" : "Point",
 				"coordinates" : [18.424055, -33.924869]
 			},
 			"properties" : {
