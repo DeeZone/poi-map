@@ -100,7 +100,7 @@
 				httpRequest.send();
 			}
 	
-			fetchJSONFile(window.location.origin + '/workshops.json', function(data){
+			fetchJSONFile('workshops.json', function(data){
 				eventsLayer.setGeoJSON(data);
 			});
 			
