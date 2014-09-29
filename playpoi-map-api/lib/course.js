@@ -97,8 +97,14 @@ Course.prototype.post = function(req, res) {
           // Convert timestamp string to Date object
           var timestamp = parseInt(self.request.body.updated_timestamp);
           updateArgs['$set'].updated = convertToDate(timestamp);
+        }
+        else if (keys[i] == 'updated_timestamp' && self.request.body[keys[i]] === undefined) {
+          var date = new Date();
+          updateArgs['$set'].updated = date;
         } // location as a geoloaction
         else if (keys[i] == 'location' && self.request.body[keys[i]].coordinates !== undefined) {
+          // http://api.tiles.mapbox.com/v4/geocode/mapbox.places-v1
+          // /Broome+Australia.json?access_token=pk.eyJ1IjoiZGVlem9uZSIsImEiOiJ3bmdJcVlnIn0.AfQscey5bQGEwZIcsvaUBQ
           updateArgs['$set'].location = self.request.body.location;
         } // everything else
         else if (self.request.body[keys[i]] !== undefined) {
@@ -107,7 +113,7 @@ Course.prototype.post = function(req, res) {
       }
 
       // Update the course document.
-      self.updateUser(self._id, updateArgs, self.response);
+      self.updateCourse(self._id, updateArgs, self.response);
     }
   );
 };
@@ -122,7 +128,7 @@ Course.prototype.post = function(req, res) {
  * @param response
  *  Response object to handle responses back to the sender.
  */
-User.prototype.updateCourse = function(course_id, args, response) {
+Course.prototype.updateCourse = function(course_id, args, response) {
   var self = {};
   self.course_id = course_id;
   self.args = args;
@@ -151,7 +157,7 @@ User.prototype.updateCourse = function(course_id, args, response) {
  * @param response
  *  The response object in a POST callback.
  */
-User.prototype.delete = function(request, response) {
+Course.prototype.delete = function(request, response) {
   var self = this;
   self.course_id = request.query.course_id;
   self.response = response;

@@ -66,7 +66,7 @@ app.configure(function() {
 });
 
 // Start server
-var port = process.env.PP_MAP_API_PORT || 4733;
+var port = process.env.PLAYPOI_MAP_API_PORT || 4722;
 app.listen(port, function() {
   console.log('Playpoi Map API server listening on port %d in %s mode.', port, app.settings.env);
 });
@@ -74,7 +74,7 @@ app.listen(port, function() {
 /**
  * Mongo setup and config.
  */
-var mongoUri = 'mongodb://localhost/pp-map';
+var mongoUri = 'mongodb://localhost/playpoi-map';
 mongoose.connect(mongoUri);
 mongoose.connection.on('error', function(err) {
   console.log('Unable to connect to the Mongo database (%s). Check to make sure the database is running.', mongoUri);
@@ -151,8 +151,9 @@ app.get('/courses', function(req, res) {
  * POST to /course
  */
 app.post('/course', function(req, res) {
-  if (req.body.title === undefined || req.body.location === undefined) {
-    res.send(400, 'No title and/or location specified.');
+  if ((req.query.course_type === undefined) &&
+      (req.body.title === undefined || req.body.address1 === undefined || req.body.city === undefined || req.body.country === undefined)) {
+    res.send(400, 'course_type and title, address1, city and country are required.');
   }
   else {
     var course = new Course(mapCourseModel);
