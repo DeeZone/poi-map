@@ -106,6 +106,17 @@ mongoose.connection.once('open', function() {
  */
 
 /**
+ * GET /api - report basic details about the API
+ * GET /api/v1
+ */
+app.get('/api', function(req, res) {
+  res.send(200, 'PlayPoi.com Map API (playpoi-map-api). Available versions: v1 (/api/v1) See https://github.com/DeeZone/poi-map for the related git repository.');
+});
+app.get('/api/v1', function(req, res) {
+  res.send(200, 'PlayPoi.com Map API (playpoi-map-api). Version 1.x.x, see wiki (https://github.com/DeeZone/poi-map/wiki) for documentation');
+});
+
+/**
  * GET from /course
  */
 app.get('/course', function(req, res) {
