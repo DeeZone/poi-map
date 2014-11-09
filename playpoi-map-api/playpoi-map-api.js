@@ -23,26 +23,6 @@ process.argv.forEach(function(val, idx, arr) {
     listenForPort = true;
   }
 });
-    
-/**
- * Express Setup
- */
-var app = express();
-
-app.configure(function() {
-  // Replaces express.bodyParser() - parses request body and populates request.body
-  app.use(express.urlencoded());
-  app.use(express.json());
-
-  // Checks request.body for HTTP method override
-  app.use(express.methodOverride());
-
-  // Perform route lookup based on url and HTTP method
-  app.use(app.router);
-
-  // Show all errors in development
-  app.use(express.errorHandler({dumpException: true, showStack: true}));
-});
 
 
 /**
