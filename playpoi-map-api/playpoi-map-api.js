@@ -142,6 +142,7 @@ app.get('/api/v1/courses', function(req, res) {
  * POST to /api/v1/course
  */
 app.post('/api/v1/course', function(req, res) {
+  console.log('req.body.title: ' + req.body.title);
   if ((req.query.course_type === undefined) &&
       (req.body.title === undefined || req.body.address1 === undefined || req.body.city === undefined || req.body.country === undefined)) {
     res.send(400, 'course_type and title, address1, city and country are required.');
