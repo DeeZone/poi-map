@@ -91,21 +91,24 @@ Course.prototype.post = function(req, res) {
       var updateArgs = {'$set':{}};
       
       var keys = Object.keys(self.request.body);
+      console.log('Course.prototype.post - keys: ' + keys);
       for (var i = 0; i < keys.length; i++) {
-        // updated as a javascript Date
-        if (keys[i] == 'updated_timestamp' && self.request.body[keys[i]] !== undefined) {
-          // Convert timestamp string to Date object
-          var timestamp = parseInt(self.request.body.updated_timestamp);
-          updateArgs['$set'].updated = convertToDate(timestamp);
+        if (keys[i] == 'updated' && self.request.body[keys[i]] !== undefined) {
+          var date = new Date();
+          updateArgs['$set'].updated = new Date();
         }
-        else if (keys[i] == 'updated_timestamp' && self.request.body[keys[i]] === undefined) {
+        else if (keys[i] == 'updated' && self.request.body[keys[i]] === undefined) {
           var date = new Date();
           updateArgs['$set'].updated = date;
+
+/*
         } // location as a geoloaction
         else if (keys[i] == 'location' && self.request.body[keys[i]].coordinates !== undefined) {
           // http://api.tiles.mapbox.com/v4/geocode/mapbox.places-v1
           // /Broome+Australia.json?access_token=pk.eyJ1IjoiZGVlem9uZSIsImEiOiJ3bmdJcVlnIn0.AfQscey5bQGEwZIcsvaUBQ
           updateArgs['$set'].location = self.request.body.location;
+*/
+
         } // everything else
         else if (self.request.body[keys[i]] !== undefined) {
           updateArgs['$set'][keys[i]] = self.request.body[keys[i]];
@@ -123,30 +126,50 @@ Course.prototype.post = function(req, res) {
  *
  * @param course_id
  *  Courese ID of the course document to update/upsert.
- * @param args
+ * @param updateArgs
  *  Values to update the document with.
  * @param response
  *  Response object to handle responses back to the sender.
  */
-Course.prototype.updateCourse = function(course_id, args, response) {
+Course.prototype.updateCourse = function(course_id, updateArgs, response) {
   var self = {};
   self.course_id = course_id;
-  self.args = args;
+  self.args = updateArgs;
   self.response = response;
 
-  this.docModel.update(
-    { 'course_id': self.course_id },
-    self.args,
-    { upsert: true },
-    function(err, num, raw) {
-      if (err) {
-        self.response.send(500, err);
-        dslogger.error(err);
-      }
+  console.log('Course.prototype.updateCourse');
+  console.log('course_id: ' + course_id);
+  console.log('updateArgs: ' + JSON.stringify(updateArgs));
 
-      self.response.send(true);
+  if (course_id === undefined) {
+
+    var courseEntry = new this.docModel(self.args);
+    courseEntry.save(function(err) {
+    if (err) {
+      self.response.send(500, err);
     }
-  );
+    // Added course entry to db
+    self.response.send(201, self.args);
+    console.log("Created course entry using Course POST method.");
+    return 1;
+  });
+  }
+  else {
+
+    this.docModel.update(
+      { 'course_id': self.course_id },
+      self.args,
+      { upsert: true },
+      function(err, num, raw) {
+        if (err) {
+          self.response.send(500, err);
+          dslogger.error(err);
+        }
+        self.response.send(true);
+      }
+    );
+
+  }
 };
 
 /**

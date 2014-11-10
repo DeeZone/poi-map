@@ -23,26 +23,6 @@ process.argv.forEach(function(val, idx, arr) {
     listenForPort = true;
   }
 });
-    
-/**
- * Express Setup
- */
-var app = express();
-
-app.configure(function() {
-  // Replaces express.bodyParser() - parses request body and populates request.body
-  app.use(express.urlencoded());
-  app.use(express.json());
-
-  // Checks request.body for HTTP method override
-  app.use(express.methodOverride());
-
-  // Perform route lookup based on url and HTTP method
-  app.use(app.router);
-
-  // Show all errors in development
-  app.use(express.errorHandler({dumpException: true, showStack: true}));
-});
 
 
 /**
@@ -126,9 +106,20 @@ mongoose.connection.once('open', function() {
  */
 
 /**
- * GET from /course
+ * GET /api - report basic details about the API
+ * GET /api/v1
  */
-app.get('/course', function(req, res) {
+app.get('/api', function(req, res) {
+  res.send(200, 'PlayPoi.com Map API (playpoi-map-api). Available versions: v1 (/api/v1) See https://github.com/DeeZone/poi-map for the related git repository.');
+});
+app.get('/api/v1', function(req, res) {
+  res.send(200, 'PlayPoi.com Map API (playpoi-map-api). Version 1.x.x, see wiki (https://github.com/DeeZone/poi-map/wiki) for documentation');
+});
+
+/**
+ * GET from /api/v1/course
+ */
+app.get('/api/v1/course', function(req, res) {
   if (req.query.course_id === undefined) {
     res.send(400, 'No course_id specified.');
     dslogger.error('GET /course request. No course_id specified.');
@@ -140,17 +131,18 @@ app.get('/course', function(req, res) {
 });
 
 /**
- * GET from /courses
+ * GET from /api/v1/courses
  */
-app.get('/courses', function(req, res) {
+app.get('/api/v1/courses', function(req, res) {
   var courses = new Courses(mapCourseModel);
   courses.get(req, res);
 });
 
 /**
- * POST to /course
+ * POST to /api/v1/course
  */
-app.post('/course', function(req, res) {
+app.post('/api/v1/course', function(req, res) {
+  console.log('req.body.title: ' + req.body.title);
   if ((req.query.course_type === undefined) &&
       (req.body.title === undefined || req.body.address1 === undefined || req.body.city === undefined || req.body.country === undefined)) {
     res.send(400, 'course_type and title, address1, city and country are required.');
@@ -162,7 +154,7 @@ app.post('/course', function(req, res) {
 });
 
 /**
- * DELETE /course
+ * DELETE /api/v1/course
  */
 app.delete('/course', function(req, res) {
   if (req.query.course_id === undefined) {
