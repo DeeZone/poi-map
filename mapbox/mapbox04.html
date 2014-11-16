@@ -7,7 +7,7 @@
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.css' rel='stylesheet' />
-    <link rel="image_src" href="map-thumbnail.png" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
     <style>
       body { margin:0; padding:0; }
       #map {
@@ -74,33 +74,43 @@
 				background:#3887BE;
 				color:#FFF;
 			}
-			
+
+#header-hotspot {
+    background: rgba(0, 0, 0, 0);
+    color: #fff;
+    position:relative;
+    z-index: 2;
+		float: left;
+		width: 100%;
+}	
 			
 #header-container {
     background-color:black;
     background: rgba(0, 0, 0, 0.75);
     color: #fff;
     position:relative;
-		top: 20px;
     z-index: 1;
 		float: left;
 		width: 100%;
+		top: -100px;
 }
 			
 		</style>
+		
 	</head>
 	<body>
     <div class='custom-popup' id="map"></div>
-		<div class="container" id="header-container">
-			<div>
-				<div style="float: left">LOGO</div>
-				<div style="float: right;">
-			    <div style="float: left">User Name</div>
-		      <div style="float: left">Add Event</div>
+		<div class="container" id="header-hotspot">
+		  <div class="container" id="header-container">
+			  <div>
+				  <div style="float: left">LOGO</div>
+				  <div style="float: right;">
+			      <div style="float: left">User Name</div>
+		        <div style="float: left">Add Event</div>
+			    </div>
 			  </div>
-			</div>
-    </div>
-		
+      </div>
+		<.div>
 
 
     <script>
@@ -138,7 +148,20 @@
 				eventsLayer.setGeoJSON(data);
 			});
 			
-			
+
+		  $(document).ready(function() { 
+        $("#header-hotspot").mouseenter(function() {
+          $("#header-container").animate({ 
+            top: 0 
+          }, 1000);  
+        });
+				$("#header-hotspot").mouseleave(function() {
+          $("#header-container").animate({ 
+            top: -100 
+          }, 1000);  
+        }); 
+      }); 
+
     </script>
   </body>
 </html>
