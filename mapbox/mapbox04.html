@@ -92,7 +92,7 @@
     z-index: 1;
 		float: left;
 		width: 100%;
-		top: -100px;
+		top: -150px;
 }
 			
 		</style>
@@ -103,10 +103,10 @@
 		<div class="container" id="header-hotspot">
 		  <div class="container" id="header-container">
 			  <div>
-				  <div style="float: left">LOGO</div>
+				  <div style="float: left"><a href="http://www.playpoi.com>" traget="_new"><img src="http://www.playpoi.com/sites/playpoi.com/themes/playpoi/images/logo.png" height="112" width="240" border="0"></a></div>
 				  <div style="float: right;">
-			      <div style="float: left">User Name</div>
-		        <div style="float: left">Add Event</div>
+			      <div style="float: left; font-family: sans-serif; padding: 0.5em; margin-top: 30%;">User Name: <a href="" style="color: #ffffff;">Nick</a></div>
+		        <div style="float: left; font-family: sans-serif; padding: 0.5em; margin-top: 30%;"><a href="" style="color: #ffffff;">Add Event</a></div>
 			    </div>
 			  </div>
       </div>
@@ -153,11 +153,11 @@
         $("#header-hotspot").mouseenter(function() {
           $("#header-container").animate({ 
             top: 0 
-          }, 1000);  
+          }, 500);  
         });
 				$("#header-hotspot").mouseleave(function() {
           $("#header-container").animate({ 
-            top: -100 
+            top: -150 
           }, 1000);  
         }); 
       }); 
